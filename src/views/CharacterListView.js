@@ -19,7 +19,14 @@ class CharacterListView extends React.Component {
     return (
       <div className="CharactersList_wrapper">
         {this.props.isFetching && (
-          <Loader type="Ball-Triangle" color="#00BFFF" height="90" width="60" />
+          <div className='loader'>
+            <Loader
+              type="Ball-Triangle"
+              color="#00BFFF"
+              height="90"
+              width="60"
+            />
+          </div>
         )}
         <CharacterList characters={this.props.characters} />
       </div>
